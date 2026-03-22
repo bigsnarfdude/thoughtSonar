@@ -77,8 +77,6 @@ thoughtSonar/
 │   ├── blackboard.md                  # Agent collaboration log
 │   ├── results.tsv                    # 19 versions scored
 │   └── archive/                       # Key prompt versions
-├── figures/                           # Paper figures
-│   └── plot_results.py               # Generate all figures
 └── FINDINGS.md                        # Detailed experimental writeup
 ```
 
