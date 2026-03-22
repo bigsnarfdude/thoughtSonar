@@ -114,9 +114,9 @@ Anthropic proved activation probes work at >99% AUROC on deception detection (Ma
 ## Citation
 
 ```
-@misc{ohprecio2026thoughtsonar,
-  title={thoughtSonar: Sandbagging Detection Limits — From Text Monitors to Activation Probes},
-  author={Ohprecio, Vincent},
+@misc{bigsnarfdude2026thoughtsonar,
+  title={thoughtSonar: Sandbagging Detection Limits - From Text Monitors to Activation Probes},
+  author={bigsnarfdude},
   year={2026},
   howpublished={AI Control Hackathon, Apart Research}
 }
