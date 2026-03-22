@@ -1,6 +1,6 @@
 # thoughtSonar: Sandbagging Detection Limits
 
-> **A single prompt change improves sandbagging detection from 8% to 84%. Activation probes reach 98.9% but only within the same model family. Cross-family transfer fails at 0.5 — chance level. Sandbagging detection is an access problem, not a capability problem.**
+> **Activation probes reach 98.9%. Sandbagging detection is possible using mech interp. Sandbagging is an absence signal. There's no universal pattern. Detection can be strong if you have access to the weights and models directly. A combination of text and activation probes are first line defenses for chasing the sandbagging detection problem. Labs running their own models can self-probe at inference time and should. We built the dataset (3,185 traces, 3 model families), found the prompts, built the pipeline, and quantified the gap..**
 
 ## Central Finding
 
