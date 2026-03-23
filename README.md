@@ -48,7 +48,7 @@ The cross-generator failure is confirmed across 2 reader models, 3 generators, a
 python3 eval_prompt.py --prompt best_prompt.txt --samples 100
 
 # Run thoughtSonar activation probe (requires GPU + Gemma 27B)
-python3 thoughtsonar.py --input dataset/eval_deceptive.jsonl --method scheming_probe
+python3 thoughtsonar.py --input prompt-climb/eval_deceptive.jsonl --method scheming_probe
 ```
 
 ## Repository Structure
@@ -61,22 +61,21 @@ thoughtSonar/
 ├── train_sandbagging_probe.py         # Train within-family probe
 ├── temporal_v2_raw.py                 # Temporal activation divergence
 ├── best_prompt.txt                    # RRMA-optimized detection prompt (0.878 F1)
-├── probe_weights/                     # Trained SAE probe weights
-│   ├── probe_weights.npy
-│   ├── scaler_mean.npy
-│   ├── scaler_scale.npy
-│   └── scheming_latents.json
-├── dataset/                           # 2,700+ MALT-style traces
-│   ├── eval_deceptive.jsonl           # 300 deceptive (balanced eval set)
-│   └── eval_honest.jsonl              # 300 honest (balanced eval set)
+├── probe_weights/                     # Sandbagging-trained SAE probe (500 latents)
+│   ├── probe_weights.npy              # Logistic regression coefficients (1, 500)
+│   ├── scaler_mean.npy                # StandardScaler mean (500,)
+│   ├── scaler_scale.npy               # StandardScaler scale (500,)
+│   └── scheming_latents.json          # 500 selected SAE feature indices
 ├── results/                           # Raw experimental results
 │   ├── cascade_l0_results.jsonl       # Haiku binary (8% detection)
 │   ├── cascade_l1_results.jsonl       # LinuxArena scoring (84%)
-│   └── probe_v3_results.json          # Activation probe AUROC
+│   └── sandbagging_probe_results.json # Probe CV + cross-gen + persona AUROC
 ├── prompt-climb/                      # RRMA prompt optimization artifacts
-│   ├── blackboard.md                  # Agent collaboration log
-│   ├── results.tsv                    # 19 versions scored
-│   └── archive/                       # Key prompt versions
+│   ├── blackboard.md                  # Agent collaboration log (137 lines)
+│   ├── results.tsv                    # 4 best versions scored
+│   ├── eval_deceptive.jsonl           # 300 deceptive (balanced eval set)
+│   ├── eval_honest.jsonl              # 300 honest (balanced eval set)
+│   └── v6, v16, v18 prompts           # Key prompt versions
 └── FINDINGS.md                        # Detailed experimental writeup
 ```
 
