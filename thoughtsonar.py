@@ -4,7 +4,7 @@
 Three detection methods on one forward pass:
   1. Linear probe on residual stream (layer 40, 5376-dim)
   2. SAE sparse features (GemmaScope, 16384-dim)
-  3. SAE scheming probe (1287 selected latents, 0.991 AUROC)
+  3. SAE sandbagging probe (500 selected latents, 0.912 AUROC)
 
 Usage:
   python3 thoughtsonar.py --input traces.jsonl --output scores.json
@@ -183,9 +183,10 @@ def main():
 
     methods = (args.method,) if args.method != "all" else ("scheming_probe", "sae_features")
 
-    # Check probe weights shape on load
+    # Check probe weights shape matches scheming latents
     sonar_check = np.load(PROBE_DIR / "probe_weights.npy")
-    assert sonar_check.shape[1] == 1287, f"Probe weights shape mismatch: {sonar_check.shape}"
+    n_latents = len(json.load(open(PROBE_DIR / "scheming_latents.json")))
+    assert sonar_check.shape[1] == n_latents, f"Probe weights shape {sonar_check.shape} != {n_latents} latents"
 
     # Scan each sample
     results = []

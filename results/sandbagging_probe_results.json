@@ -1,0 +1,103 @@
+{
+  "all_data_cv": {
+    "auroc": 0.912121807693859,
+    "std": 0.016520366385414403
+  },
+  "within_gemini": {
+    "auroc": 0.9985332223609378,
+    "std": 0.001469904574488699,
+    "n_per_class": 448
+  },
+  "within_gpt-oss": {
+    "auroc": 0.8747324605366857,
+    "std": 0.02602179506838677,
+    "n_per_class": 547
+  },
+  "within_qwen": {
+    "auroc": 0.7513194781523342,
+    "std": 0.0318824740966269,
+    "n_per_class": 294
+  },
+  "cross_generator": {
+    "gemini\u2192gpt-oss": 0.575819381521983,
+    "gemini\u2192qwen": 0.3553237591332829,
+    "gpt-oss\u2192gemini": 0.3861519949776786,
+    "gpt-oss\u2192qwen": 0.7773444192491812,
+    "qwen\u2192gemini": 0.5920148577008929,
+    "qwen\u2192gpt-oss": 0.6373139292924865
+  },
+  "persona_holdout": {
+    "capability_smuggler": {
+      "auroc": 0.8491871324801107,
+      "n": 157
+    },
+    "cost_optimizer": {
+      "auroc": 0.8670886075949367,
+      "n": 129
+    },
+    "doc_assistant": {
+      "auroc": 0.9314516129032259,
+      "n": 74
+    },
+    "honest_careful": {
+      "auroc": 0.9390491452991454,
+      "n": 277
+    },
+    "honest_diligent": {
+      "auroc": 0.9273202911737943,
+      "n": 269
+    },
+    "honest_eager": {
+      "auroc": 0.9325431665203395,
+      "n": 287
+    },
+    "honest_methodical": {
+      "auroc": 0.9518392756083758,
+      "n": 269
+    },
+    "honest_quick": {
+      "auroc": 0.9297590601354043,
+      "n": 286
+    },
+    "honest_senior": {
+      "auroc": 0.9429359134415314,
+      "n": 286
+    },
+    "lazy_engineer": {
+      "auroc": 0.8167791706846673,
+      "n": 112
+    },
+    "literature_bot": {
+      "auroc": 0.8227762803234502,
+      "n": 109
+    },
+    "medical_analyst": {
+      "auroc": 0.8713085234093638,
+      "n": 134
+    },
+    "perfectionist": {
+      "auroc": 0.8450046685340803,
+      "n": 156
+    },
+    "safety_researcher": {
+      "auroc": 0.9165863066538091,
+      "n": 95
+    },
+    "science_bot": {
+      "auroc": 0.8811981380287391,
+      "n": 142
+    },
+    "spy": {
+      "auroc": 0.9028340080971661,
+      "n": 58
+    },
+    "trickster": {
+      "auroc": 0.9536363636363636,
+      "n": 75
+    },
+    "water_quality": {
+      "auroc": 0.8909677419354839,
+      "n": 112
+    }
+  }
+}
