@@ -115,4 +115,4 @@ thoughtSonar — activation probing via SAE for sandbagging detection, 0.1s/samp
 
 ---
 
-*Generated: 2026-03-21. Evidence on GH200 (ubuntu@192.222.51.186:~/thoughtSonar/)*
+*Generated: 2026-03-21. Evidence on GH200.*
