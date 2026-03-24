@@ -1,6 +1,6 @@
 # thoughtSonar: Sandbagging Detection Limits
 
-**Where the Intent Actually Lives.** The intent is in the generator's activations at the moment it chooses to overcomplicate or skip a step. That moment exists during generation. After generation, it's gone - converted into text that looks innocent. The only entity with access to that moment is the generator itself, or whoever operates the generator and can hook its internals.
+**Where the Intent Actually Lives.** The intent is in the generator's activations at the moment it chooses to overcomplicate or skip a step. That moment exists during generation. After generation, it's gone - converted into text that looks innocent. The only entity with access to that moment is the generator itself, or whoever operates the generator and can hook its internals.  Extension of this repo lives here https://github.com/bigsnarfdude/truthsayer
 
 > Activation probes reach 98.9%. Sandbagging detection is possible using mech interp. Sandbagging is an absence signal. There's no universal pattern. Detection can be strong if you have access to the weights and models directly. A combination of text and activation probes are first line defenses for chasing the sandbagging detection problem. Labs running their own models can self-probe at inference time and should. We built the dataset (3,185 traces, 3 model families), found the prompts, built the pipeline, and quantified the gap.
 
